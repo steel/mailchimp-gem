@@ -63,15 +63,9 @@ or
 ### Export API usage
 
 In addition to the standard API you can make calls to the
-[MailChimp Export API](http://apidocs.mailchimp.com/export/1.0/) using a APIExport object.  Given an existing
-Mailchimp::API object you can request a new Mailchimp::APIExporter object:
-
-    api = Mailchimp::API.new(@api_key)
-    mailchimp_export = api.get_exporter
-
-or you can construct a new object directly:
-
-    mailchimp_export = Mailchimp::APIExport.new(@api_key)
+[MailChimp Export API](http://apidocs.mailchimp.com/export/1.0/) using a Mailchimp::Export object:
+  
+  mailchimp_export = Mailchimp::Export.new(@api_key)
 
 Calling Export API functions is identical to making standard API calls but the
 return value is an Enumerator which loops over the lines returned from the
