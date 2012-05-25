@@ -48,6 +48,6 @@ module Mailchimp
 end
 
 if defined?(ActionMailer)
-  ActionMailer::Base.add_delivery_method(:mailchimp_mandrill, Mailchimp::MandrillDeliveryHandler)
+  ActionMailer::Base.add_delivery_method(:mailchimp_mandrill, Mailchimp::MandrillDeliveryHandler) if ActionMailer::Base.respond_to?(:add_delivery_method)
 end
 

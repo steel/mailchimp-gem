@@ -44,4 +44,4 @@ module Mailchimp
   end
 end
 
-ActionMailer::Base.add_delivery_method :mailchimp_sts, Mailchimp::StsDeliveryHandler
+ActionMailer::Base.add_delivery_method(:mailchimp_sts, Mailchimp::StsDeliveryHandler) if ActionMailer::Base.respond_to?(:add_delivery_method)
